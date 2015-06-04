@@ -72,7 +72,7 @@ public class Remoter implements AutoCloseable {
 	 * @throws InterruptedException
 	 */
 	public String exec(String command) throws JSchException, IOException, InterruptedException {
-		String output = "Hello Xiangbin, no result!";
+		String output = null;
 
 		channelExec = (ChannelExec) session.openChannel("exec");
 		channelExec.setCommand(command);
